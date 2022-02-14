@@ -1,10 +1,8 @@
 <?php
 $servername = "172.27.0.2";
 $username = "root";
-$password = "kali";
-$dbname = "trucorp";
-
-//CREDIT : W3 School.
+$password = "admin";
+$dbname = "Trucorp";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -13,7 +11,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT id, nama, alamat, jabatan FROM users";
+$sql = "SELECT ID, Nama, Alamat, Jabatan FROM users";
 $result = $conn->query($sql);
 $temp = 0;
 if ($result->num_rows > 0) {
