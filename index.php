@@ -11,7 +11,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT COUNT (ID) AS Total FROM users";
+$sql = "SELECT COUNT ( * ) as  Total FROM users"; 
 $result = $conn->query($sql);
 $result = $result->fetch_assoc();
 
